@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAventura</title>
+    <link rel="icon" href="/favicon.png">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/miestilo.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand bg-dark navbar-dark py-2 fixed-top navbarSize fondoRojoAsc">
+        <div class="container-fluid ">
+            <div class="d-flex flex-row align-items-center ">
+                <a class="navbar-brand" href="#">
+                    <img src="img/pokeball_icon2.png" alt="" class="">
+                    PokeAventura
+                </a>
+              <div class="text-white mx-2">
+                <span class="text-white" data-bs-toggle="modal" data-bs-target="#sobreMiModal">Sobre mí</span>
+              </div>
+            </div>
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex w-100 justify-content-end  align-items-center ">
+              <div class="d-none text-white ">💰<span class="moneyLogged"></span></div>
+              <div class="loginBoton ">
+                <!-- Button trigger modal -->
+                <button type="button" class="bg-transparent border-0 text-white " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <div class="d-flex align-items-center ">
+                    <span class="text-decoration-underline ">Login</span>
+                  </div>
+                </button>
+
+              </div>
+              <div class="loginConFoto d-none">
+                <li class="nav-item dropdown">
+                  <button class="btn btn-dark dropdown-toggle d-flex  align-items-center bg-transparent border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="marcoFotoPerfil position-relative overflow-hidden "><img src="img/av1.png" alt="" class=" fotoPerfil position-absolute start-50 top-50 translate-middle "></div><span class="m-1 nombreUsuario">User</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end fondoRojoAsc">
+                    <li><a class="dropdown-item irAMenu d-none" href="#"><i class="bi bi-house"></i> Menú principal</a></li>
+                    <li><a class="dropdown-item irAPerfil d-none" href="#"><i class="bi bi-person"></i> Perfil</a></li>
+                    <li><a class="dropdown-item irAAdminMenu d-none" href="#"><i class="bi bi-gear"></i> Menú Admin</a></li>
+                    <li><a class="dropdown-item cerrarSesion" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a></li>
+                  </ul>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- Modal Login-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content fondoModal">
+          <div class="modal-header ">
+            <h1 class="modal-title fs-1 w-100 text-center text-white" id="exampleModalLabel"><img src="img/pokeball_icon2.png" alt="" class="sizeIcono">PokeAventura</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2 class="text-center text-white">Login de usuario</h2>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="inputUsername" placeholder="">
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="inputPassword" placeholder="">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+            
+            <div class="text-center mt-2">
+              <button type="button" class="btn btn-azulclaro login-modal" data-bs-dismiss="modal">Login</button>
+              <button type="button" class="btn btn-gris registro" data-bs-dismiss="modal">Regístrate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Inventario-->
+    <div class="modal fade" id="inventarioModal" tabindex="-1" aria-labelledby="inventarioModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-1 w-100 text-center " id="inventarioModalLabel">🎒INVENTARIO🎒</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="inventarioBody" class="modal-body">
+          </div>
+          <div class="modal-footer text-center w-100">
+            <button type="button" class="btn btn-gris" data-bs-dismiss="modal">Cerrar mochila</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Sobre mí-->
+    <div class="modal fade" id="sobreMiModal" tabindex="-1" aria-labelledby="inventarioModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header fondoRojoDesc">
+            <h1 class="modal-title fs-1 w-100 text-center text-white" id="sobreMiModalLabel">🐻 Sobre mí 🐻</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="sobreMiBody" class="modal-body fondoSobreMi">
+            <div class="w-100 d-flex">
+              <div class="text-white">
+                <h2 class="text-decoration-underline">Agustín Ramírez Figueredo</h2>
+                <p>Tengo 29 años, pero desde siempre he sido un aficionado a los videojuegos. Mis primeros recuerdos son jugando al antiguo ordenador de mi padre. Y desde siempre me han fascinado en lo más absoluto.</p>
+                <p>Los videojuegos son una forma de expresión interactiva que consiguen algo que otros medios no pueden: hacerte vivir una aventura interactiva donde tus acciones tienen consecuencias y cambian la historia.</p>
+                <p>Desde pequeño, he tenido una imaginación casi sin límites, inventando historias nuevas y emocionantes, y con los años, me dí cuenta de que quería encontrar la forma de poder replicar esa forma de contar historias.</p>
+                <p>De esos sueños es de donde nace la idea de este proyecto. Realizado en 2024 como el proyecto de fin de curso de mis estudios en el módulo de DAW en el I.E.S. Suárez de Figueroa, he aprovechado la oportunidad para dar un primer paso y plasmar una de las ideas que tenía y hacerla realidad.</p>
+              </div>
+              <div class="">
+                <img src="img/autor.png" alt="" class="imgAutor">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer text-center w-100 fondoRojoAsc">
+            <div class="text-center mt-2">
+              <button type="button" class="btn btn-gris" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenido">
+      
+    </div>
+
+    <footer class="bg-dark fixed-bottom footerSize fondoRojoDesc">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="position-absolute bottom-0 start-0"><img src="" alt="" class="footerAvatar"></div>
+        <h5 class="text-white">Agustín Ramírez - DAW PROJECT</h5>
+        <div class="position-absolute bottom-0 end-0"><img src="" alt="" class="footerCompi"></div>
+      </div>
+      <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container bottom-0 end-0 paddingToasts">
+          <div class="toast" id="alertas" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-rojo">
+              Toast alerta.
+            </div>
+          </div>
+  
+          <div class="toast" id="resultadoGanas" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-verde fondoNotis">
+              Toast ganas.
+            </div>
+          </div>
+  
+          <div class="toast" id="resultadoPierdes" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-rojo fondoNotis">
+              Toast pierdes.
+            </div>
+          </div>
+  
+          <div class="toast" id="resultadoHuir" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            
+            <div class="toast-body btn-gris fondoNotis">
+              Toast huyes.
+            </div>
+          </div>
+  
+          <div class="toast" id="evolucion" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-azulclaro fondoNotis">
+              Toast evolucionando.
+            </div>
+          </div>
+  
+          <div class="toast" id="toastCompra" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-amarillo fondoNotis">
+              Toast comprando.
+            </div>
+          </div>
+
+          <div class="toast" id="toastUsoItem" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-body btn-verde fondoNotis">
+              Toast usar item.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

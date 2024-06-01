@@ -1,0 +1,77 @@
+<script>
+    if (window.location.href != "http://207.154.232.164:8000/#") {
+        window.location.href = "http://207.154.232.164:8000/#"
+    }
+</script>
+<script src="./js/registro.js"></script>
+
+<section id="registro" class="margenes">
+    <div class="container bordeFancy fondoGrisOp">
+        <div class=" bordeFancy2 fondoGrisOp">
+            <p class="text-center fw-bold text-decoration-underline fs-2 ">Regístrate en PokeAventura</p>
+            <p class="text-center fs-4 ">Introduce todos tus datos.</p>
+        </div>
+        <div class="row w-50 bordeFancy2 mx-auto ">
+            <div class="col-12 py-2">
+                <!-- correoRegistro -->
+                <div >
+                    <label for="correoRegistro" class="form-label text-white ">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correoRegistro" placeholder="hola@ejemplo.com" maxlength="60">
+                </div>
+            </div><br>
+            <div class="col-12 py-2">
+                <!-- usernameRegistro -->
+                <label for="usernameRegistro" class="form-label text-white ">Nombre de usuario</label>
+                <input type="text" class="form-control" id="usernameRegistro" placeholder="Pepito123" maxlength="25">
+            </div><br>
+            <div class="col-12 py-2">
+                <!-- passwordRegistro -->
+                <label for="passwordRegistro" class="form-label text-white ">Contraseña</label>
+                <input type="password" id="passwordRegistro" class="form-control" aria-describedby="passwordHelpBlock" maxlength="50">
+                <div id="passwordHelpBlock" class="form-text text-white ">Tu contraseña debe tener 4 carácteres o más.</div>
+            </div>
+        </div>
+        <!-- <div class="w-100"><div class="barraSeparadora "></div></div> -->
+        <div class="row bordeFancy2 fondoGrisOp">
+            
+            <p class="text-center fw-bold text-decoration-underline fs-2 ">Clica para elegir a tu personaje</p>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av1.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av2.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av3.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av4.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av5.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av6.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av7.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="col-6 col-lg-3 p-2 ">
+                <img src="./img/av8.png" alt="" class="w-100 avatar">
+            </div>
+            <div class="w-100"><div class="barraSeparadora "></div></div>
+            <div class="mx-auto py-3 ">
+                <!-- nombreRegistro -->
+                <label for="nombreRegistro" class="form-label w-100 text-center text-white ">Nombre de tu personaje:</label>
+                <input type="text" class="form-control w-50 mx-auto " id="nombreRegistro" placeholder="Tu nombre..." maxlength="25">
+            </div>
+            
+        </div>
+    </div>
+    <div class="text-center p-2 ">
+        <div class="mx-auto fallosRegistro d-flex flex-column w-50"></div>
+        <!-- <input type="submit" value="REGISTRATE" class="btn btn-primary registrarCuenta"> -->
+        <button class="btn btn-azulclaro text-decoration-underline registrarCuenta">REGISTRATE</button>
+        <button class="btn btn-gris botonIndex">Volver a inicio</button>
+    </div>
+</section>

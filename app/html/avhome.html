@@ -1,0 +1,20 @@
+<script>
+    if (window.location.href != "http://207.154.232.164:8000/#") {
+        window.location.href = "http://207.154.232.164:8000/#"
+    }
+    sessionStorage.clear()
+    $("#inventarioBody").empty()
+</script>
+<section id="avhome">
+    <div class="d-flex w-100 vh-100 justify-content-center align-items-center overflow-hidden position-relative ">
+        <img src="./img/pokeball_icon_big.png" alt="" class="pokeballHome">
+        <div class="position-absolute">
+            <h1 class="text-decoration-underline fw-bold textoAzul textoSombreado textoLineado">PokeAventura</h1>
+            <div class="d-flex align-items-center justify-content-center flex-column ">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-azulclaro text-decoration-underline m-2 " data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+                <button type="button" class="btn btn-gris m-2 registro">Regístrate</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,70 @@
+<script>
+    if (window.location.href != "http://207.154.232.164:8000/#") {
+        window.location.href = "http://207.154.232.164:8000/#"
+    }
+</script>
+<script src="./js/seleccionCompi.js"></script>
+
+<section id="seleccionCompi" class="margenes">
+    <div class="container bordeFancy fondoGrisOp">
+      <div class="bordeFancy2 fondoGrisOp">
+        <p class="text-center fw-bold text-decoration-underline fs-2 ">¡Comienza tu PokeAventura!</p>
+        <p class="text-center fs-4 ">Selecciona un compañero para tu aventura. Tendrás que cuidar de él y entrenarlo.</p>
+      </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 py-2 ">
+                <div class="card starter">
+                    <div class="cajaImgFull position-relative fondoStarter1"><img src="" class="imgFullSt position-absolute start-50 bottom-0 translate-middle-x sizePokemon" alt=""></div>
+                    <div class="card-body">
+                      <img src="" alt="" class="imgSt"><h5 class="card-title"><span class="nombreSt">Nombre</span></h5>
+                      <p class="card-text"><span class="descripcionSt">Desc</span></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">❤️HP: <span class="hpSt"></span></li>
+                      <li class="list-group-item">⚔️ATK: <span class="atkSt"></span></li>
+                      <span class="idSt d-none"></span>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-4 py-2 ">
+              <div class="card starter">
+                  <div class="cajaImgFull position-relative fondoStarter2"><img src="" class="imgFullSt position-absolute start-50 bottom-0 translate-middle-x sizePokemon" alt=""></div>
+                  <div class="card-body">
+                    <img src="" alt="" class="imgSt"><h5 class="card-title"><span class="nombreSt">Nombre</span></h5>
+                    <p class="card-text"><span class="descripcionSt">Desc</span></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">❤️HP: <span class="hpSt"></span></li>
+                    <li class="list-group-item">⚔️ATK: <span class="atkSt"></span></li>
+                    <span class="idSt d-none"></span>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 py-2 ">
+              <div class="card starter">
+                <div class="cajaImgFull position-relative fondoStarter3"><img src="" class="imgFullSt position-absolute start-50 bottom-0 translate-middle-x sizePokemon" alt=""></div>
+                <div class="card-body">
+                  <img src="" alt="" class="imgSt"><h5 class="card-title"><span class="nombreSt">Nombre</span></h5>
+                  <p class="card-text"><span class="descripcionSt">Desc</span></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">❤️HP: <span class="hpSt"></span></li>
+                  <li class="list-group-item">⚔️ATK: <span class="atkSt"></span></li>
+                  <span class="idSt d-none"></span>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="w-100"><div class="barraSeparadora "></div></div> -->
+            <div class="mx-auto py-3 bordeFancy2 w-50 ">
+                <!-- nombreCompi -->
+                <label for="moteCompiInput" class="form-label w-100 text-center text-white ">Dale un nombre a tu nuevo compi <img src="./img/pokemon_icon.png" alt="" class="imgStSeleccionado rotatedX">:</label>
+                <input type="text" class="form-control mx-auto " id="moteCompiInput" placeholder="Mote de tu compañero..."  maxlength="30">
+            </div>
+            
+        </div>
+    </div>
+    <div class="text-center p-2 ">
+        <div class="fallosRegistroCompi mx-auto d-flex flex-column w-50"></div>
+        <button class="btn btn-azulclaro text-decoration-underline registrarCompi">¡COMIENZA TU AVENTURA!</button>
+    </div>
+</section>
