@@ -230,7 +230,7 @@ Debido al extenso número de funcionalidades de la aplicación y a que algunas s
 
 **Sistema de carpetas**
 ```
-2324_TFG_VeronicaFigueredo
+pokeaventura_defensa
 ├───app
 │   ├───css
 │   ├───html
