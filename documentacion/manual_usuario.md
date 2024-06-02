@@ -8,6 +8,8 @@
 
 Quizás hayas escuchado esta frase muchas veces a lo largo de tu vida, o quizás esta sea la primera vez. De cualquier forma, ¡estoy aquí para guiarte en tu nueva PokeAventura!
 
+Lo primero de todo será acceder a la propia aplicación. Si haces clic en este link, irás allí en un periquete. [PokeAventura](http://207.154.232.164:8000)
+
 ## Inicio
 
 La primera vez que entres en el juego, verás esta pantalla.
